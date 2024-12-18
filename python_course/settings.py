@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'python_course.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if DEBUG is True:
+if DEBUG == 'True':
     DATABASES = {
         'default': {
             'ENGINE': os.environ.get('DATABASE_ENGINE'),
