@@ -89,24 +89,24 @@ WSGI_APPLICATION = 'python_course.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if DEBUG == 'True':
-    DATABASES = {
-        'default': {
-            'ENGINE': os.environ.get('DATABASE_ENGINE'),
-            'NAME': os.environ.get('DATABASE_NAME'),
-            'USER': os.environ.get('DATABASE_USER'),
-            'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-            'HOST': os.environ.get('DATABASE_HOST'),
-            'PORT': os.environ.get('DATABASE_PORT'),
-        }
-    }
-elif 'DATABASE_URL' in os.environ:
-    DATABASES = {
-    'default':  dj_database_url.config(
-        conn_max_age=500,
-        conn_health_checks=True,
-        )
-    }
+# if DEBUG == 'True':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': os.environ.get('DATABASE_ENGINE'),
+#             'NAME': os.environ.get('DATABASE_NAME'),
+#             'USER': os.environ.get('DATABASE_USER'),
+#             'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+#             'HOST': os.environ.get('DATABASE_HOST'),
+#             'PORT': os.environ.get('DATABASE_PORT'),
+#         }
+#     }
+# elif 'DATABASE_URL' in os.environ:
+DATABASES = {
+'default':  dj_database_url.config(
+    conn_max_age=500,
+    conn_health_checks=True,
+    )
+}
 
 
 # Password validation
