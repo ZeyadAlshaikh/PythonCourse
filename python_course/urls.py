@@ -19,8 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path("", include("website.urls")),
     path("fahda_alhosan", include("fahda_alhosan.urls")),
     path("faye_alsharikh", include("faye_alsharikh.urls")),
@@ -32,6 +34,18 @@ urlpatterns = [
     path("shahad_alessa", include("shahad_alessa.urls")),
     path("sharefah_alqahtani", include("sharefah_alqahtani.urls")),
     path("shymaa_muhammad", include("shymaa_muhammad.urls")),
+    path("zeyad", include("zeyad.urls")),
+
+
+
+
+
+
+
+
+
+
+
    
 ]
 

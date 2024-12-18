@@ -54,6 +54,9 @@ INSTALLED_APPS = [
     'shahad_alessa',
     'sharefah_alqahtani',
     'shymaa_muhammad',
+    'zeyad',
+    'crispy_forms',
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -90,16 +93,16 @@ WSGI_APPLICATION = 'python_course.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 # if DEBUG == 'True':
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': os.environ.get('DATABASE_ENGINE'),
-#             'NAME': os.environ.get('DATABASE_NAME'),
-#             'USER': os.environ.get('DATABASE_USER'),
-#             'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-#             'HOST': os.environ.get('DATABASE_HOST'),
-#             'PORT': os.environ.get('DATABASE_PORT'),
-#         }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': os.environ.get('DATABASE_ENGINE'),
+#         'NAME': os.environ.get('DATABASE_NAME'),
+#         'USER': os.environ.get('DATABASE_USER'),
+#         'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
+#         'HOST': os.environ.get('DATABASE_HOST'),
+#         'PORT': os.environ.get('DATABASE_PORT'),
 #     }
+# }
 # elif 'DATABASE_URL' in os.environ:
 DATABASES = {
 'default':  dj_database_url.config(
@@ -151,3 +154,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Crispy forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
