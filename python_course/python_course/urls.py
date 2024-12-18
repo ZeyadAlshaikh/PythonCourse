@@ -22,6 +22,17 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("website.urls")),
+    path("fahda_alhosan", include("fahda_alhosan.urls")),
+    path("faye_alsharikh", include("faye_alsharikh.urls")),
+    path("lena_moammar", include("lena_moammar.urls")),
+    path("reham_alqahtani", include("reham_alqahtani.urls")),
+    path("rema_alzoman", include("rema_alzoman.urls")),
+    path("shahad_alotabi", include("shahad_alotabi.urls")),
+    path("shaden_alshethry", include("shaden_alshethry.urls")),
+    path("shahad_alessa", include("shahad_alessa.urls")),
+    path("sharefah_alqahtani", include("sharefah_alqahtani.urls")),
+    path("shymaa_muhammad", include("shymaa_muhammad.urls")),
+   
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
