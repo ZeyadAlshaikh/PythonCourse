@@ -100,13 +100,13 @@ if DEBUG == 'True':
             'PORT': os.environ.get('DATABASE_PORT'),
         }
     }
-# elif 'DATABASE_URL' in os.environ:
-#     DATABASES = {
-#     'default':  dj_database_url.config(
-#         conn_max_age=500,
-#         conn_health_checks=True,
-#         )
-#     }
+elif 'DATABASE_URL' in os.environ:
+    DATABASES = {
+    'default':  dj_database_url.config(
+        conn_max_age=500,
+        conn_health_checks=True,
+        )
+    }
 
 
 # Password validation
