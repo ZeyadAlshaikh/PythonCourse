@@ -1,8 +1,8 @@
 asgiref==3.8.1
 crispy-bootstrap5==2024.10
 dj-database-url==2.3.0
-Django==5.1.4
-django-crispy-forms==2.3
+Django==4.2.10
+django-crispy-forms==2.1
 psycopg==3.2.3
 psycopg-c==3.2.3
 python-dotenv==1.0.1
